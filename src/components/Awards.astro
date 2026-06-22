@@ -7,9 +7,9 @@ import { awards } from '../data/content';
   <Collapsible number="08" title="Honors & Awards">
     <ul class="grid gap-3 sm:grid-cols-2">
       {awards.map((award) => (
-        <li class="flex items-baseline justify-between gap-4 rounded-lg border border-slate-200 px-4 py-3">
-          <span class="text-sm text-slate-700">{award.title}</span>
-          {award.year && <span class="whitespace-nowrap text-xs text-slate-500">{award.year}</span>}
+        <li class="card reveal flex items-baseline justify-between gap-4 px-4 py-3">
+          <span class="text-sm text-slate-200">{award.title}</span>
+          {award.year && <span class="whitespace-nowrap text-xs text-teal-300">{award.year}</span>}
         </li>
       ))}
     </ul>

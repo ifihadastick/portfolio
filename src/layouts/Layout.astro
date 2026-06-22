@@ -17,7 +17,14 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0b0f" />
     <link rel="icon" type="image/svg+xml" href={`${Astro.site?.pathname ?? ''}favicon.svg`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
@@ -26,5 +33,47 @@ const {
   </head>
   <body class="antialiased">
     <slot />
+
+    <script is:inline>
+      // Scroll-reveal
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+      );
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+      // When an accordion opens, stagger-reveal its contents
+      document.querySelectorAll('details').forEach((d) => {
+        d.addEventListener('toggle', () => {
+          if (!d.open) return;
+          d.querySelectorAll('.reveal:not(.in)').forEach((el, i) => {
+            setTimeout(() => el.classList.add('in'), i * 70);
+          });
+        });
+      });
+
+      // Active nav highlight
+      const navLinks = [...document.querySelectorAll('header nav a[href^="#"]')];
+      const linkFor = (id) => navLinks.find((a) => a.getAttribute('href') === '#' + id);
+      const spy = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const link = linkFor(entry.target.id);
+            navLinks.forEach((a) => a.classList.remove('nav-active'));
+            if (link) link.classList.add('nav-active');
+          });
+        },
+        { rootMargin: '-45% 0px -50% 0px' }
+      );
+      document.querySelectorAll('main section[id]').forEach((s) => spy.observe(s));
+    </script>
   </body>
 </html>

@@ -7,18 +7,22 @@ interface Props {
 const { number, title, defaultOpen = false } = Astro.props;
 ---
 
-<details class="group" open={defaultOpen}>
-  <summary class="flex cursor-pointer items-center gap-3 py-2 select-none">
-    <span class="section-number text-sm font-semibold">{number}</span>
-    <h2 class="flex-1 text-2xl font-bold tracking-tight text-ink sm:text-3xl">{title}</h2>
-    <div class="hidden h-px flex-1 bg-slate-200 sm:block"></div>
+<details class="group reveal" open={defaultOpen}>
+  <summary
+    class="flex cursor-pointer items-center gap-4 rounded-xl px-3 py-3 select-none transition hover:bg-white/[0.03]"
+  >
+    <span class="section-number text-sm font-bold sm:text-base">{number}</span>
+    <h2 class="flex-1 text-2xl font-bold tracking-tight text-white sm:text-3xl">{title}</h2>
+    <div
+      class="hidden h-px flex-1 bg-gradient-to-r from-white/15 to-transparent transition group-open:from-teal-400/40 sm:block"
+    ></div>
     <span
-      class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-slate-300 text-base text-slate-500 transition-transform duration-200 group-open:rotate-45"
+      class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 text-lg text-slate-300 transition-all duration-300 group-hover:border-teal-400/60 group-hover:text-white group-open:rotate-45 group-open:border-teal-400/60 group-open:text-teal-300"
     >
       +
     </span>
   </summary>
-  <div class="pb-2 pt-6">
+  <div class="px-3 pb-4 pt-7">
     <slot />
   </div>
 </details>

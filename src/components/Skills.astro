@@ -5,35 +5,33 @@ import { skillGroups, certifications } from '../data/content';
 
 <section id="skills" class="mx-auto max-w-5xl px-6 py-2">
   <Collapsible number="03" title="Skills & Certifications">
-    <h3 class="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">
+    <h3 class="reveal mb-4 text-sm font-semibold uppercase tracking-wider text-slate-500">
       Certifications &amp; Coursework (2022–Present)
     </h3>
     <ul class="mb-12 grid gap-3 sm:grid-cols-2">
       {certifications.map((cert) => (
-        <li class="flex items-baseline justify-between gap-4 rounded-lg border border-slate-200 px-4 py-3">
-          <span class="text-sm text-slate-700">
+        <li class="card reveal flex items-baseline justify-between gap-4 px-4 py-3">
+          <span class="text-sm text-slate-200">
             {cert.name}
             <span class="block text-xs text-slate-500">{cert.org}</span>
           </span>
-          <span class="whitespace-nowrap text-xs font-medium text-accent-dark">{cert.date}</span>
+          <span class="whitespace-nowrap text-xs font-semibold text-teal-300">{cert.date}</span>
         </li>
       ))}
     </ul>
 
-    <h3 class="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">
+    <h3 class="reveal mb-4 text-sm font-semibold uppercase tracking-wider text-slate-500">
       Technical Skills
     </h3>
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {skillGroups.map((group) => (
-        <div class="rounded-lg border border-slate-200 p-5">
-          <h4 class="mb-3 text-sm font-semibold uppercase tracking-wide text-accent-dark">
+        <div class="card reveal p-5">
+          <h4 class="mb-3 text-sm font-semibold uppercase tracking-wide text-teal-300">
             {group.category}
           </h4>
           <ul class="flex flex-wrap gap-2">
             {group.items.map((item) => (
-              <li class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
-                {item}
-              </li>
+              <li class="chip">{item}</li>
             ))}
           </ul>
         </div>

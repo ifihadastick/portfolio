@@ -12,32 +12,65 @@ const nav = [
 ];
 ---
 
-<header class="sticky top-0 z-50 border-b border-slate-200/70 bg-paper/90 backdrop-blur-sm">
+<header class="sticky top-0 z-50 border-b border-white/10 bg-[#0a0b0f]/80 backdrop-blur-xl">
   <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-    <a href="#" class="text-sm font-bold tracking-widest text-ink">JS</a>
-    <nav class="hidden gap-6 text-sm text-slate-600 md:flex">
+    <a
+      href="#"
+      class="font-display text-sm font-bold tracking-[0.25em] text-white transition hover:text-teal-300"
+      >JS</a
+    >
+    <nav class="hidden gap-7 text-sm text-slate-400 md:flex">
       {nav.map((item) => (
-        <a href={item.href} class="transition hover:text-accent-dark">
+        <a href={item.href} class="nav-link transition hover:text-white">
           {item.label}
         </a>
       ))}
     </nav>
     <button
       id="nav-toggle"
-      class="text-sm text-slate-600 md:hidden"
+      class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-slate-300 transition hover:border-teal-400/50 hover:text-white md:hidden"
       aria-label="Toggle navigation"
     >
-      Menu
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+      </svg>
     </button>
   </div>
-  <nav id="nav-mobile" class="hidden flex-col gap-4 border-t border-slate-200/70 px-6 py-4 text-sm text-slate-600 md:hidden">
+  <nav
+    id="nav-mobile"
+    class="hidden flex-col gap-1 border-t border-white/10 px-6 py-4 text-sm text-slate-400 md:hidden"
+  >
     {nav.map((item) => (
-      <a href={item.href} class="block py-1 transition hover:text-accent-dark">
+      <a href={item.href} class="nav-link block rounded-lg px-2 py-2 transition hover:bg-white/5 hover:text-white">
         {item.label}
       </a>
     ))}
   </nav>
 </header>
+
+<style>
+  .nav-link {
+    position: relative;
+  }
+  .nav-link.nav-active {
+    color: #fff;
+  }
+  header nav.md\:flex .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2dd4bf, #6366f1);
+    transition: width 0.25s ease;
+  }
+  header nav.md\:flex .nav-link:hover::after,
+  header nav.md\:flex .nav-link.nav-active::after {
+    width: 100%;
+  }
+</style>
 
 <script>
   const toggle = document.getElementById('nav-toggle');
