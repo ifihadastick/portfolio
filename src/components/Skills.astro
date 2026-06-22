@@ -1,16 +1,35 @@
 ---
 import SectionHeading from './SectionHeading.astro';
-import { skillGroups } from '../data/content';
+import { skillGroups, certifications } from '../data/content';
 ---
 
 <section id="skills" class="mx-auto max-w-5xl px-6 py-16">
-  <SectionHeading number="03" title="Skills" />
-  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+  <SectionHeading number="03" title="Skills & Certifications" />
+
+  <h3 class="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">
+    Certifications &amp; Coursework (2022–Present)
+  </h3>
+  <ul class="mb-12 grid gap-3 sm:grid-cols-2">
+    {certifications.map((cert) => (
+      <li class="flex items-baseline justify-between gap-4 rounded-lg border border-slate-200 px-4 py-3">
+        <span class="text-sm text-slate-700">
+          {cert.name}
+          <span class="block text-xs text-slate-500">{cert.org}</span>
+        </span>
+        <span class="whitespace-nowrap text-xs font-medium text-accent-dark">{cert.date}</span>
+      </li>
+    ))}
+  </ul>
+
+  <h3 class="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">
+    Technical Skills
+  </h3>
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {skillGroups.map((group) => (
       <div class="rounded-lg border border-slate-200 p-5">
-        <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide text-accent-dark">
+        <h4 class="mb-3 text-sm font-semibold uppercase tracking-wide text-accent-dark">
           {group.category}
-        </h3>
+        </h4>
         <ul class="flex flex-wrap gap-2">
           {group.items.map((item) => (
             <li class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">

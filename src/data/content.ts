@@ -12,34 +12,77 @@ export const profile = {
   stats: [
     { label: 'Years in Enterprise IT', value: '18+' },
     { label: 'Peer-Reviewed Publications', value: '2' },
-    { label: 'Active Certifications', value: '4' },
+    { label: 'Certifications Since 2022', value: '9' },
     { label: 'Sectors: Higher Ed, SLED, Healthcare', value: '3' },
   ],
 };
 
 export const certifications = [
-  'NVIDIA-Certified Associate: AI Infrastructure & Operations',
-  'NVIDIA-Certified Professional: Accelerated Data Science',
-  'Nutanix Certified Professional – Multicloud Infrastructure 6',
-  'Nutanix Certified Professional – Artificial Intelligence',
+  { name: 'NVIDIA-Certified Professional: Accelerated Data Science', org: 'NVIDIA', date: '2025' },
+  { name: 'NVIDIA-Certified Associate: AI Infrastructure & Operations', org: 'NVIDIA', date: '2025' },
+  { name: 'Nutanix Certified Professional – Artificial Intelligence', org: 'Nutanix', date: '2024' },
+  { name: 'Nutanix Certified Professional – Multicloud Infrastructure 6', org: 'Nutanix', date: 'Oct 2023' },
+  { name: 'NCSE – Nutanix Certified Systems Engineer', org: 'Nutanix', date: 'Jun 2023' },
+  { name: 'Computing in Python II: Control Structures', org: 'Georgia Institute of Technology', date: 'Jul 2022' },
+  { name: 'Computing in Python I: Fundamentals and Procedural Programming', org: 'Georgia Institute of Technology', date: 'May 2022' },
+  { name: 'Microsoft Certified: Azure AI Fundamentals', org: 'Microsoft', date: 'May 2022' },
+  { name: 'Microsoft Certified: Azure Fundamentals', org: 'Microsoft', date: 'Jan 2022' },
 ];
 
 export const skillGroups = [
   {
-    category: 'Programming',
-    items: ['Python (applied ML, data pipelines, demo apps)', 'R & RStudio (statistical modeling)'],
+    category: 'Programming & Data',
+    items: [
+      'Python (pandas, NumPy, applied ML pipelines)',
+      'R & RStudio (statistical modeling)',
+      'SQL',
+      'scikit-learn',
+      'spaCy / NLP & Named Entity Recognition',
+      'TF-IDF & text feature engineering',
+      'Jupyter / VS Code',
+    ],
   },
   {
-    category: 'AI / ML',
-    items: ['Model deployment', 'Inferencing infrastructure', 'AI-ready architecture design'],
+    category: 'AI / Machine Learning',
+    items: [
+      'Supervised learning (logistic regression, classification)',
+      'NLP pipeline design',
+      'Model deployment & inferencing infrastructure',
+      'AI-ready architecture design',
+      'GPU-accelerated computing frameworks',
+    ],
   },
   {
-    category: 'Accelerated Computing',
-    items: ['GPU workload profiling', 'Cluster sizing', 'Parallel computing concepts', 'Accelerated computing architecture'],
+    category: 'Analytics & Statistics (Georgia Tech OMSA coursework)',
+    items: [
+      'Analytics modeling & data visualization (CSE 6040, CSE 6242, ISYE 6501)',
+      'Business analytics (MGT 6203, MGT 8803)',
+      'Time series, regression & Bayesian statistics',
+      'Computational data analytics',
+      'Applied Analytics Practicum (employer-sponsored capstone)',
+    ],
   },
   {
-    category: 'Infrastructure',
-    items: ['Hyperconverged', 'Private/hybrid cloud', 'SAN', 'Disaster recovery', 'High availability'],
+    category: 'Accelerated & Cloud Computing',
+    items: [
+      'GPU workload profiling',
+      'Cluster sizing',
+      'Parallel computing concepts',
+      'Accelerated computing architecture',
+      'Microsoft Azure (AI & core infrastructure)',
+      'AWS fundamentals',
+    ],
+  },
+  {
+    category: 'Infrastructure & Architecture',
+    items: [
+      'Hyperconverged infrastructure',
+      'Private/hybrid/public cloud',
+      'SAN & storage architecture',
+      'Disaster recovery',
+      'High availability',
+      'Workload telemetry & performance profiling',
+    ],
   },
   {
     category: 'Containers & Orchestration',
@@ -47,11 +90,11 @@ export const skillGroups = [
   },
   {
     category: 'Platforms',
-    items: ['Nutanix Cloud Platform', 'VMware', 'Dell', 'HPE'],
+    items: ['Nutanix Cloud Platform', 'VMware', 'Dell EMC', 'HPE'],
   },
   {
-    category: 'Data & Analytics',
-    items: ['Graduate coursework in ML & computational methods (MS Analytics, Georgia Tech)'],
+    category: 'Data Visualization & BI',
+    items: ['Microsoft Power BI (dashboard design, DAX, interactive reporting)', 'Data storytelling for sales/technical audiences'],
   },
 ];
 
@@ -238,15 +281,15 @@ export const liveWork = [
 
 export const dashboards = [
   {
-    title: 'SLED Market Intelligence — Map View',
+    title: 'Hospital Capacity Dashboard',
     url: 'https://app.powerbi.com/view?r=eyJrIjoiODMzMWUxODEtNzMyNy00NWJjLWIzNTktYzJiZGMxMjFiMTgyIiwidCI6IjQ4ZGIxMmFjLTVkYzMtNGQ1MS05N2VkLTVhM2RkZTYxOTlmYyJ9&pageName=ReportSectionf97385449b74f863ad3b',
   },
   {
-    title: 'SLED Market Intelligence — Customer View',
+    title: 'COVID Case Dashboard',
     url: 'https://app.powerbi.com/view?r=eyJrIjoiNzk1NjdmZWQtYTJlMi00OTIxLWJjOTAtNGYzMWNkYjBlMDA3IiwidCI6IjQ4ZGIxMmFjLTVkYzMtNGQ1MS05N2VkLTVhM2RkZTYxOTlmYyJ9',
   },
   {
-    title: 'SLED Market Intelligence — Reseller View',
+    title: 'Nashville COVID Impact Dashboard',
     url: 'https://app.powerbi.com/view?r=eyJrIjoiMWUwMjUxMmUtYzI3Yy00YjM5LThkYzYtMGZlMTRlMjZlODgyIiwidCI6IjQ4ZGIxMmFjLTVkYzMtNGQ1MS05N2VkLTVhM2RkZTYxOTlmYyJ9&pageName=ReportSectionf01f0cdb4016ed6f802b',
   },
 ];
