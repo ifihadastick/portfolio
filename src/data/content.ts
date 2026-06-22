@@ -328,13 +328,3 @@ export const dashboards = [
     url: 'https://app.powerbi.com/view?r=eyJrIjoiMWUwMjUxMmUtYzI3Yy00YjM5LThkYzYtMGZlMTRlMjZlODgyIiwidCI6IjQ4ZGIxMmFjLTVkYzMtNGQ1MS05N2VkLTVhM2RkZTYxOTlmYyJ9&pageName=ReportSectionf01f0cdb4016ed6f802b',
   },
 ];
-
-export const awards = [
-  { title: 'Nutanix Excellence Awards (various)', year: '' },
-  { title: 'Innovation Award – Dell Technologies: Covid Hospital Dashboard', year: 'April 2020' },
-  { title: 'Innovation Award – Dell Technologies: Asset Management Platform', year: 'February 2019' },
-  { title: 'Mary Catherine Strobel Volunteer Award Nominee (Uprise Nashville)', year: 'September 2020' },
-  { title: 'Frances Stubblefield Calculus I Award – MTSU', year: '' },
-  { title: 'Dell Customer Experience Ambassador', year: 'Q4 2011' },
-  { title: 'Dell Award of Excellence', year: 'January 2010' },
-];
