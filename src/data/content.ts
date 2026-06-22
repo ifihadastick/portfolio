@@ -112,9 +112,18 @@ export const skillGroups = [
 export const experience = [
   {
     company: 'Nutanix',
+    role: 'Solutions Architect – Enterprise AI',
+    location: 'Remote',
+    dates: 'May 2026 – Present',
+    bullets: [
+      'Pre-Sales Solution Architect working with customers across all verticals to adopt Sovereign AI in their private cloud infrastructure.',
+    ],
+  },
+  {
+    company: 'Nutanix',
     role: 'Sr. Systems Engineer',
     location: 'Nashville, TN',
-    dates: 'April 2023 – Present',
+    dates: 'April 2023 – May 2026',
     bullets: [
       'Serve as technical partner to Large Enterprise, Federal, and public-sector clients, architecting cloud platform strategies for performance, resilience, and AI-readiness.',
       'Develop Python-based sample applications to demonstrate platform capabilities to prospective clients, translating complex infrastructure concepts into tangible proof-of-concept deployments.',
