@@ -1,0 +1,30 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Joshua Stevenson — Solutions Architect | AI & Cloud Infrastructure',
+  description = 'Portfolio of Joshua Stevenson: Solutions Architect specializing in AI infrastructure, cloud, and data analytics for Higher Education, SLED, and enterprise clients.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href={`${Astro.site?.pathname ?? ''}favicon.svg`} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body class="antialiased">
+    <slot />
+  </body>
+</html>

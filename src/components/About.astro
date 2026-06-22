@@ -1,0 +1,32 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { certifications } from '../data/content';
+---
+
+<section id="about" class="mx-auto max-w-5xl px-6 py-16">
+  <SectionHeading number="01" title="About" />
+  <div class="grid gap-10 sm:grid-cols-3">
+    <p class="col-span-2 text-base leading-relaxed text-slate-600">
+      I'm a Solutions Architect based in Nashville with 18+ years in enterprise IT, focused on
+      Higher Education, State & Local Government, and research-driven environments. My work
+      sits at the intersection of infrastructure and analytics — designing AI-ready cloud
+      platforms while also building the Python pipelines, statistical models, and dashboards
+      that turn raw data into decisions. I'm currently completing a Master of Science in
+      Analytics at Georgia Tech, with coursework in machine learning, NLP, and statistical
+      modeling.
+    </p>
+    <div>
+      <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500">
+        Certifications
+      </h3>
+      <ul class="space-y-2 text-sm text-slate-600">
+        {certifications.map((cert) => (
+          <li class="flex gap-2">
+            <span class="text-accent-dark">●</span>
+            <span>{cert}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

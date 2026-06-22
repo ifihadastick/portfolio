@@ -1,0 +1,50 @@
+---
+import { profile } from '../data/content';
+const base = import.meta.env.BASE_URL;
+---
+
+<section class="mx-auto flex max-w-5xl flex-col gap-10 px-6 pb-20 pt-16 sm:pt-24">
+  <div class="max-w-3xl">
+    <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-accent-dark">
+      {profile.location}
+    </p>
+    <h1 class="text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+      {profile.name}
+    </h1>
+    <p class="mt-3 text-lg font-medium text-slate-600 sm:text-xl">{profile.title}</p>
+    <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-600">
+      {profile.summary}
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a
+        href={`${base}resume/Joshua_Stevenson_Resume.pdf`}
+        target="_blank"
+        rel="noopener"
+        class="rounded-md bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-dark"
+      >
+        View Résumé
+      </a>
+      <a
+        href="#projects"
+        class="rounded-md border border-slate-300 px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-accent-dark hover:text-accent-dark"
+      >
+        View Work ↓
+      </a>
+      <a
+        href="#contact"
+        class="rounded-md border border-slate-300 px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-accent-dark hover:text-accent-dark"
+      >
+        Get in Touch →
+      </a>
+    </div>
+  </div>
+
+  <dl class="grid grid-cols-2 gap-6 border-t border-slate-200 pt-8 sm:grid-cols-4">
+    {profile.stats.map((stat) => (
+      <div>
+        <dt class="text-sm text-slate-500">{stat.label}</dt>
+        <dd class="mt-1 text-2xl font-bold text-ink">{stat.value}</dd>
+      </div>
+    ))}
+  </dl>
+</section>

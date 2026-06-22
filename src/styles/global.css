@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #0f172a;
+  --color-paper: #fafaf9;
+  --color-accent: #0ea5a3;
+  --color-accent-dark: #0b7d7b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.section-number {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  color: var(--color-accent);
+}

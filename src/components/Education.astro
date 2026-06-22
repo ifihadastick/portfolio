@@ -1,0 +1,22 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { education } from '../data/content';
+---
+
+<section id="education" class="mx-auto max-w-5xl px-6 py-16">
+  <SectionHeading number="04" title="Education" />
+  <div class="space-y-8">
+    {education.map((item) => (
+      <div class="grid gap-2 sm:grid-cols-4 sm:gap-8">
+        <p class="text-sm font-semibold text-ink sm:col-span-1">{item.dates}</p>
+        <div class="sm:col-span-3">
+          <h3 class="text-lg font-bold text-ink">{item.school}</h3>
+          <p class="text-sm font-medium text-slate-500">{item.degree}</p>
+          {item.description && (
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">{item.description}</p>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
