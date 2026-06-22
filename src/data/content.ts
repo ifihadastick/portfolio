@@ -25,14 +25,18 @@ export const certifications = [
 
 export const skillGroups = [
   {
-    category: 'Programming & Data',
+    category: 'Languages',
+    items: ['Python', 'R & RStudio', 'SQL'],
+  },
+  {
+    category: 'Data',
     items: [
-      'Python (pandas, NumPy, applied ML pipelines)',
-      'R & RStudio (statistical modeling)',
-      'SQL',
-      'scikit-learn',
-      'spaCy / NLP & Named Entity Recognition',
-      'TF-IDF & text feature engineering',
+      'pandas & NumPy',
+      'Data modeling',
+      'Data engineering',
+      'Feature engineering',
+      'Principal Component Analysis (PCA)',
+      'OpenRefine',
       'Jupyter / VS Code',
     ],
   },
@@ -40,6 +44,9 @@ export const skillGroups = [
     category: 'AI / Machine Learning',
     items: [
       'Supervised learning (logistic regression, classification)',
+      'scikit-learn',
+      'spaCy / NLP & Named Entity Recognition',
+      'TF-IDF & text feature engineering',
       'NLP pipeline design',
       'Model deployment & inferencing infrastructure',
       'AI-ready architecture design',
@@ -86,11 +93,19 @@ export const skillGroups = [
   },
   {
     category: 'Platforms',
-    items: ['Nutanix Cloud Platform', 'VMware', 'Dell EMC', 'HPE'],
+    items: ['Nutanix Cloud Platform', 'VMware', 'Dell EMC', 'HPE', 'AWS', 'Microsoft Azure'],
   },
   {
     category: 'Data Visualization & BI',
-    items: ['Microsoft Power BI (dashboard design, DAX, interactive reporting)', 'Data storytelling for sales/technical audiences'],
+    items: [
+      'Microsoft Power BI (dashboard design, DAX, interactive reporting)',
+      'Tableau',
+      'Matplotlib',
+      'Seaborn',
+      'D3.js',
+      'ggplot2',
+      'Data storytelling for sales/technical audiences',
+    ],
   },
 ];
 
