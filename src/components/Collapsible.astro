@@ -1,0 +1,24 @@
+---
+interface Props {
+  number: string;
+  title: string;
+  defaultOpen?: boolean;
+}
+const { number, title, defaultOpen = false } = Astro.props;
+---
+
+<details class="group" open={defaultOpen}>
+  <summary class="flex cursor-pointer items-center gap-3 py-2 select-none">
+    <span class="section-number text-sm font-semibold">{number}</span>
+    <h2 class="flex-1 text-2xl font-bold tracking-tight text-ink sm:text-3xl">{title}</h2>
+    <div class="hidden h-px flex-1 bg-slate-200 sm:block"></div>
+    <span
+      class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-slate-300 text-base text-slate-500 transition-transform duration-200 group-open:rotate-45"
+    >
+      +
+    </span>
+  </summary>
+  <div class="pb-2 pt-6">
+    <slot />
+  </div>
+</details>

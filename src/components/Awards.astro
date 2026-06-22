@@ -1,16 +1,17 @@
 ---
-import SectionHeading from './SectionHeading.astro';
+import Collapsible from './Collapsible.astro';
 import { awards } from '../data/content';
 ---
 
-<section id="awards" class="mx-auto max-w-5xl px-6 py-16">
-  <SectionHeading number="08" title="Honors & Awards" />
-  <ul class="grid gap-3 sm:grid-cols-2">
-    {awards.map((award) => (
-      <li class="flex items-baseline justify-between gap-4 rounded-lg border border-slate-200 px-4 py-3">
-        <span class="text-sm text-slate-700">{award.title}</span>
-        {award.year && <span class="whitespace-nowrap text-xs text-slate-500">{award.year}</span>}
-      </li>
-    ))}
-  </ul>
+<section id="awards" class="mx-auto max-w-5xl px-6 py-2">
+  <Collapsible number="08" title="Honors & Awards">
+    <ul class="grid gap-3 sm:grid-cols-2">
+      {awards.map((award) => (
+        <li class="flex items-baseline justify-between gap-4 rounded-lg border border-slate-200 px-4 py-3">
+          <span class="text-sm text-slate-700">{award.title}</span>
+          {award.year && <span class="whitespace-nowrap text-xs text-slate-500">{award.year}</span>}
+        </li>
+      ))}
+    </ul>
+  </Collapsible>
 </section>

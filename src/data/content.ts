@@ -8,12 +8,12 @@ export const profile = {
   github: 'https://github.com/ifihadastick',
   resumeFile: '/resume/Joshua_Stevenson_Resume.pdf',
   summary:
-    'Solutions Architect with 18+ years of enterprise IT experience and specialization in Higher Education, academic research, and SLED environments. Combines broad infrastructure expertise — cloud, HPC, storage, and AI-ready architecture — with hands-on Python development and a graduate-level foundation in analytics (MS, Georgia Institute of Technology) to design and optimize solutions for demanding, data-intensive workloads. Certified in Accelerated Data Science & AI Infrastructure and Operations, with working knowledge of GPU computing frameworks and accelerated computing platforms. Known for building trusted technical partnerships with university and research clients, translating complex scientific and institutional requirements into right-sized, high-performance solutions.',
+    'Solutions Architect with 18+ years of enterprise IT experience, specializing in Large Enterprise, Federal, and public-sector environments. Combines broad infrastructure expertise — cloud, HPC, storage, and AI-ready architecture — with hands-on Python development and a graduate-level foundation in analytics (MS, Georgia Institute of Technology) to design and optimize solutions for demanding, data-intensive workloads. Certified in Accelerated Data Science & AI Infrastructure and Operations, with working knowledge of GPU computing frameworks and accelerated computing platforms. Known for building trusted technical partnerships with clients, translating complex technical and institutional requirements into right-sized, high-performance solutions.',
   stats: [
     { label: 'Years in Enterprise IT', value: '18+' },
     { label: 'Peer-Reviewed Publications', value: '2' },
     { label: 'Certifications Since 2022', value: '9' },
-    { label: 'Sectors: Higher Ed, SLED, Healthcare', value: '3' },
+    { label: 'Sectors: Enterprise, Federal, Healthcare', value: '3' },
   ],
 };
 
@@ -53,13 +53,15 @@ export const skillGroups = [
     ],
   },
   {
-    category: 'Analytics & Statistics (Georgia Tech OMSA coursework)',
+    category: 'Analytics & Statistics',
     items: [
-      'Analytics modeling & data visualization (CSE 6040, CSE 6242, ISYE 6501)',
-      'Business analytics (MGT 6203, MGT 8803)',
-      'Time series, regression & Bayesian statistics',
+      'Analytics modeling & data visualization',
+      'Business analytics',
+      'Time series analysis',
+      'Regression analysis',
+      'Bayesian statistics',
       'Computational data analytics',
-      'Applied Analytics Practicum (employer-sponsored capstone)',
+      'Applied analytics practicum (employer-sponsored capstone)',
     ],
   },
   {
@@ -105,12 +107,12 @@ export const experience = [
     location: 'Nashville, TN',
     dates: 'April 2023 – Present',
     bullets: [
-      'Serve as technical partner to Higher Education, State & Local Government, and enterprise clients, architecting cloud platform strategies for performance, resilience, and AI-readiness.',
+      'Serve as technical partner to Large Enterprise, Federal, and public-sector clients, architecting cloud platform strategies for performance, resilience, and AI-readiness.',
       'Develop Python-based sample applications to demonstrate platform capabilities to prospective clients, translating complex infrastructure concepts into tangible proof-of-concept deployments.',
-      'Architect end-to-end solutions for university and research clients spanning AI infrastructure, cloud, storage, data protection, and compute-intensive workloads — applying knowledge of accelerated computing platforms to right-size environments for demanding research use cases.',
+      'Architect end-to-end solutions spanning AI infrastructure, cloud, storage, data protection, and compute-intensive workloads — applying knowledge of accelerated computing platforms to right-size environments for demanding use cases.',
       'Leverage real-world telemetry and workload profiling to design appropriately scaled solutions, applying performance analysis methodology to match infrastructure to application requirements.',
-      'Support Higher Education clients in evaluating AI-ready infrastructure strategies, including GPU-accelerated compute architecture and modern data platform integration.',
-      'Enable client success in automation, disaster recovery, cost visibility, and high availability for mission-critical academic and research environments.',
+      'Support clients in evaluating AI-ready infrastructure strategies, including GPU-accelerated compute architecture and modern data platform integration.',
+      'Enable client success in automation, disaster recovery, cost visibility, and high availability for mission-critical environments.',
     ],
   },
   {

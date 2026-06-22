@@ -21,3 +21,11 @@ body {
   font-family: var(--font-mono, ui-monospace, monospace);
   color: var(--color-accent);
 }
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
