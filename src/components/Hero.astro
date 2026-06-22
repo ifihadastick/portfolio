@@ -1,6 +1,5 @@
 ---
 import { profile } from '../data/content';
-const base = import.meta.env.BASE_URL;
 ---
 
 <section class="mx-auto flex max-w-5xl flex-col gap-10 px-6 pb-20 pt-16 sm:pt-24">
@@ -17,12 +16,12 @@ const base = import.meta.env.BASE_URL;
     </p>
     <div class="mt-8 flex flex-wrap gap-3">
       <a
-        href={`${base}resume/Joshua_Stevenson_Resume.pdf`}
+        href={profile.linkedin}
         target="_blank"
         rel="noopener"
         class="rounded-md bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-dark"
       >
-        View Résumé
+        LinkedIn
       </a>
       <a
         href="#projects"
