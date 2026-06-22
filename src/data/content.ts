@@ -194,6 +194,7 @@ export const publications = [
     title: 'Observational Study: Policy Impact on Student Infection Rates',
     venue: 'Journal of the Academy of Public Health',
     year: '2025',
+    type: 'Peer-Reviewed',
     description:
       'School mask mandates and student SARS-CoV-2 infections: evidence from a natural experiment of neighboring K-12 districts in North Dakota, USA.',
     links: [
@@ -208,10 +209,33 @@ export const publications = [
     title: 'BNT162b2 Vaccine-Associated Myo/Pericarditis in Adolescents: A Stratified Risk-Benefit Analysis',
     venue: 'European Journal of Clinical Investigation',
     year: '2022',
+    type: 'Peer-Reviewed',
     description: 'Krug A, Stevenson J, Høeg TB. Eur J Clin Invest. 2022;52:e13759.',
     links: [
       { label: 'DOI', url: 'https://doi.org/10.1111/eci.13759' },
       { label: 'PubMed', url: 'https://pubmed.ncbi.nlm.nih.gov/35156705/' },
+    ],
+  },
+  {
+    title: 'School Closures in 2020/21: What Really Happened?',
+    venue: 'Brownstone Institute',
+    year: '2023',
+    type: 'Article',
+    description:
+      'Examines how political partisanship, more than scientific evidence, shaped U.S. school closure decisions during the pandemic, with disadvantaged and minority students bearing the disproportionate cost.',
+    links: [
+      { label: 'Read the article', url: 'https://brownstone.org/articles/school-closures-in-2020-21-what-really-happened/' },
+    ],
+  },
+  {
+    title: 'The Dashed Dreams of Digital Learning',
+    venue: 'Brownstone Institute',
+    year: '2023',
+    type: 'Article',
+    description:
+      'Reviews evidence that heavy classroom technology use correlates with worse academic outcomes, arguing the promised digital revolution in education benefited ed-tech vendors more than students.',
+    links: [
+      { label: 'Read the article', url: 'https://brownstone.org/articles/the-dashed-dreams-of-digital-learning/' },
     ],
   },
 ];
