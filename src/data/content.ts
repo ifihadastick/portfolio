@@ -9,12 +9,6 @@ export const profile = {
   resumeFile: '/resume/Joshua_Stevenson_Resume.pdf',
   summary:
     'Solutions Architect with 18+ years of enterprise IT experience, specializing in Large Enterprise, Federal, and public-sector environments. Combines broad infrastructure expertise — cloud, HPC, storage, and AI-ready architecture — with hands-on Python development and a graduate-level foundation in analytics (MS, Georgia Institute of Technology) to design and optimize solutions for demanding, data-intensive workloads. Certified in Accelerated Data Science & AI Infrastructure and Operations, with working knowledge of GPU computing frameworks and accelerated computing platforms. Known for building trusted technical partnerships with clients, translating complex technical and institutional requirements into right-sized, high-performance solutions.',
-  stats: [
-    { label: 'Years in Enterprise IT', value: '18+' },
-    { label: 'Peer-Reviewed Publications', value: '2' },
-    { label: 'Certifications Since 2022', value: '9' },
-    { label: 'Sectors: Enterprise, Federal, Healthcare', value: '3' },
-  ],
 };
 
 export const certifications = [
