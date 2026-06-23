@@ -32,7 +32,7 @@ export const skillGroups = [
     category: 'Data Engineering',
     items: [
       'ETL / ELT pipeline development',
-      'Data modeling (dimensional, star/snowflake schema)',
+      'Data modeling',
       'Batch & streaming processing',
       'dbt (data transformation)',
       'Apache Kafka',
