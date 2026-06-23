@@ -33,10 +33,7 @@ export const skillGroups = [
     items: [
       'ETL / ELT pipeline development',
       'Data modeling (dimensional, star/snowflake schema)',
-      'Data warehousing & data lakes',
       'Batch & streaming processing',
-      'Apache Spark',
-      'Apache Airflow (orchestration)',
       'dbt (data transformation)',
       'Apache Kafka',
       'SQL & query optimization',
@@ -44,7 +41,6 @@ export const skillGroups = [
       'Feature engineering',
       'pandas & NumPy',
       'Parquet & columnar formats',
-      'Cloud data platforms (Snowflake, BigQuery, Databricks)',
     ],
   },
   {
