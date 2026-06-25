@@ -124,9 +124,19 @@ export const experience = [
   },
   {
     company: 'Nutanix',
+    role: 'Sr. Systems Engineer / Enterprise AI SME',
+    location: 'Nashville, TN',
+    dates: 'June 2025 – April 2026',
+    bullets: [
+      'Served as Enterprise AI subject-matter expert for the field, advising customers and account teams on AI-ready infrastructure, GPU-accelerated computing, and private-cloud AI adoption.',
+      'Continued architecting end-to-end cloud and AI infrastructure solutions while deepening focus on emerging GenAI and accelerated-computing use cases.',
+    ],
+  },
+  {
+    company: 'Nutanix',
     role: 'Sr. Systems Engineer',
     location: 'Nashville, TN',
-    dates: 'April 2023 – May 2026',
+    dates: 'April 2023 – June 2025',
     bullets: [
       'Serve as technical partner to Large Enterprise, Federal, and public-sector clients, architecting cloud platform strategies for performance, resilience, and AI-readiness.',
       'Develop Python-based sample applications to demonstrate platform capabilities to prospective clients, translating complex infrastructure concepts into tangible proof-of-concept deployments.',
